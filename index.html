@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Wikipedia</title>
+    <style>
+        /* Estilos Globais e de Reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa; /* Fundo cinza claro */
+            color: #333;
+        }
+        
+        /* Estilo do Cabeçalho (Topo) */
+        header {
+            padding: 15px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dcdcdc;
+            text-align: left;
+        }
+
+        /* Container que gerencia as 3 colunas */
+        .page-container {
+            display: flex;
+            width: 100%;
+            min-height: calc(100vh - 51px); /* Altura mínima da tela - altura do header */
+        }
+
+        /* Estilos das Colunas Laterais */
+        aside {
+            padding: 20px 15px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            /* Largura para desktop */
+            width: 200px; 
+            flex-shrink: 0; /* Impede que a coluna encolha */
+        }
+
+        /* Estilo Específico para o Menu Lateral Esquerdo */
+        aside:first-of-type {
+            border-right: 1px solid #dcdcdc;
+        }
+
+        /* Estilo Específico para o Índice Lateral Direito (TOC) */
+        aside:last-of-type {
+            border-left: 1px solid #dcdcdc;
+            /* Geralmente, o índice de âncoras tem um estilo de título específico */
+        }
+
+        /* Coluna Central (Conteúdo Principal) */
+        main {
+            flex-grow: 1; /* Permite que ocupe o espaço restante */
+            padding: 30px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        /* Estilos de Conteúdo */
+        h1 { font-size: 2em; margin-top: 0; }
+        h2 { 
+            font-size: 1.5em; 
+            margin-top: 1.5em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #dcdcdc; /* Linha de separação dos títulos */
+        }
+        ul { list-style: none; padding-left: 0; }
+        a { text-decoration: none; color: #0645ad; }
+        a:hover { text-decoration: underline; }
+        
+        /* Rodapé */
+        footer {
+            padding: 15px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #050505;
+            border-top: 1px solid #dcdcdc;
+            background-color: #ffffff;
+            width: 100%;
+        }
+
+        /* Responsividade Básica: Empilha as colunas em ecrãs pequenos */
+        @media (max-width: 768px) {
+            .page-container {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                border: none !important; 
+                border-bottom: 1px solid #dcdcdc !important;
+            }
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO GLOBAL (TOPO) -->
+    <header>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" alt="Logo do Projeto Wikipedia" width="80" height="60">
+            <figcaption>Projeto Wikipedia - Layout de Documentação Semântica Estilizada</figcaption>
+        </figure>
+    </header>
+
+    <!-- CONTAINER DE 3 COLUNAS -->
+    <div class="page-container">
+        
+        <!-- COLUNA ESQUERDA: Menu Lateral (Navegação de Contexto) -->
+        <aside>
+            <nav aria-label="Navegação de Contexto">
+                <h2>Jogos de RPG</h2>
+                <ul>
+                    <li><a href="index.html">Vampiro: A Máscara</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- COLUNA CENTRAL: Conteúdo Principal do Artigo -->
+        <main>
+            <article>
+                
+                <h1>Tudo sobre Vampiro: A Máscara</h1>
+
+                <!-- Parágrafo de Introdução -->
+                <p>
+                    Vampiro: A Máscara é um cenário de RPG de horror pessoal e fantasia urbana, baseado no sistema Storyteller para a linha de publicações do World of Darkness, centrado em vampiros que habitam um mundo de fantasia sombria.[1][2] Criado por Mark Rein*Hagen, e publicado em 1991 pela editora White Wolf, este RPG venceu o Origins Award na categoria "Melhores Regras de RPG de 1991", e chegou a ter uma segunda edição em 1992 e uma edição revisada em 1998. A referência à Máscara, no título da série, pode ser interpretada a partir de dois sentidos distintos: o primeiro refere-se à tentativa dos seres imortais de esconderem sua própria sociedade vampírica da humanidade, de seus governantes e da mídia; já o segundo sentido é usado para referir-se aos esforços dos vampiros em convencer a si mesmos de que eles ainda possuem resquícios de humanidade, e que não são monstros frios e bestiais guidados pela natureza vampírica.
+                </p>
+
+                <section id="conceito">
+                    <h2>Os Vampiros</h2>
+                    <p>
+                        O jogo utiliza a condição vampírica, imortal e amaldiçoada, como plano de fundo para explorar temas como moralidade, depravação, humanidade (ou a apreciação da condição humana em sua ausência), salvação e horror pessoal. A versão depressiva e exageradamente cruel do mundo real que os vampiros habitam é chamada de "Mundo das Trevas", e forma uma tela já sombria contra a qual as histórias e lutas dos personagens são pintadas. Os temas que o jogo procura abordar incluem a retenção do senso de personalidade, humanidade e sanidade do personagem. Além dessas preocupações pessoais, os personagens também lutam para simplesmente não serem esmagado por antagonistas mortais e sobrenaturais, bem como para sobreviver à política, traições e ambições violentas de sua própria espécie.
+                    </p>
+                </section>
+
+                <section id="clans">
+                    <h2>Os 13 Clãs</h2>
+                    <p>Vampiro: A Máscara introduz o uso de 13 clãs (ou linhas de sangue principais) no seu livro básico. Cada um dos 13 clãs principais pode traçar suas origens para um dos 13 vampiros anciões conhecidos como Antediluvianos, pois cada um dos progenitores dos 13 clãs seria um sobrevivente do dilúvio bíblico enviado por Deus na época de Noé. Cada Antediluviano é um "neto" de Caim, o primeiro vampiro. De acordo com as lendas do Mundo das Trevas, os Antediluvianos iniciaram uma guerra entre eles, chamada de Jyhad, e até mesmo nas noites modernas usam seus clãs para lutar sua guerra por eles. Indivíduos de um determinado clã reconhecem a si mesmos pois cada clã e linhagem sanguínea ostentam um conjunto único de poderes (Disciplinas) e fraquezas.</p>
+                    <ul>
+                        <li><strong>Clãs Principais:</strong></li>
+                        <li>Ventrue</li>
+                        <li>Toreador</li>
+                        <li>Tremere</li>
+                        <li>Brujah</li>
+                        <li>Malkavian</li>
+                        <li>Nosferatu</li>
+                        <li>Gangrel</li>
+                        <li>Lasombra</li>
+                        <li>Tzimisce</li>
+                        <li>Assamitas (Banu Haqim)</li>
+                        <li>Seguidores de Set (O Ministério)</li>
+                        <li>Giovanni (Subclã Hecata)</li>
+                        <li>Ravnos</li>
+                    </ul>
+                    <!-- Imagem do Artigo -->
+                    <figure>
+                        <img src="https://miro.medium.com/1*8EbkCN33iGSKmN0iPHNajw.jpeg" alt="Imagem ilustrativa do artigo" width="400" height="200">
+                        <figcaption>Fonte: Créditos da imagem.</figcaption>
+                    </figure>
+                </section>
+                <section id="disciplines">
+                    <h2>Disciplinas</h2>
+                    <p>As Disciplinas são os poderes sobrenaturais que todos os vampiros possuem em maior ou menor grau, poderes que os separam dos humanos comuns. Além da imortalidade inerente à condição vampírica, e da capacidade de usar o sangue para regenerar feridas e melhorar sua força, destreza e resistência, um vampiro que possui domínio sobre uma Disciplina obtém habilidades sobrenaturais adicionais de grande valor estratégico.</p>
+                    <ul>
+                        <li><strong>Disciplinas Comuns (Compartilhadas por Vários Clãs)</strong></li>
+                        <li>Animalismo (Animalism)</li>
+                        <li>Auspícios (Auspex)</li>
+                        <li>Dominação (Dominate)</li>
+                        <li>Fortitude (Fortitude)</li>
+                        <li>Ofuscação (Obfuscate)</li>
+                        <li>Potência (Potence)</li>
+                        <li>Presença (Presence)</li>
+                        <li>Proteanismo (Protean)</li>
+                        <li>Rapidez (Celerity)</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Disciplinas Exclusivas e de Linhagem</strong></li>
+                        <li>Quimerismo (Chimerstry) - Exclusivo dos Ravnos</li>
+                        <li>Demência (Dementation) - Exclusivo dos Malkavian</li>
+                        <li>Necromancia (Necromancy) - Exclusivo dos Giovanni e outras linhagens da Morte</li>
+                        <li>Quietus (Quietus) - Exclusivo dos Assamitas</li>
+                        <li>Serpentismo (Serpentis) - Exclusivo dos Seguidores de Set</li>
+                        <li>Taumaturgia (Thaumaturgy) - Exclusivo dos Tremere</li>
+                        <li>Tenebrosidade (Obtenebration) - Exclusivo dos Lasombra</li>
+                        <li>Vicissitude (Vicissitude) - Exclusivo dos Tzimisce</li>
+                    </ul>
+                </section>
+                <section id="renascimento">
+                    <h2>O Renascimento do Cenário</h2>
+                    <p>
+                        Em 2011, com a comemoração dos 20 anos do lançamento do jogo, houve o lançamento da edição comemorativa Vampire: The Masquerade 20th Anniversary Edition. A nova edição, revista e ampliada, traz atualizações de cenário para o novo século e atualizações de regras de Disciplina e para o Sistema Storyteller.
+                    </p>
+                    <p>
+                        Diante dos rumores de um retorno do cenário de jogo, em 2012, agora sob os cuidados da Onyx Path Publishing, foi lançado o livro Children of the Revolution, que traz informações sobre vampiros criados durante períodos de revoluções, revoltas ou grandes agitações sociais, no que aparenta significar um retorno do Clássico Mundo das Trevas. Todo o metaplot do fim do mundo existente foi ignorado, permitindo que o jogo simplesmente continue como se o Time of the Judgement não tivesse ocorrido.
+                    </p>
+                    <p>
+                        A Onyx Path anunciou, também, uma agenda para a publicação de novos títulos para o então chamado Clássico Mundo das Trevas.
+                    </p>
+                    <p>
+                        Diante do sucesso comercial obtido pela linha comemorativa de 20 anos de aniversário deste RPG, tais publicações passaram a ser consideradas como a 4ª edição do Mundo das Trevas. No ano de 2015 a editora White Wolf (bem como todas as suas linhas editoriais), foi comprada pela Paradox Interactive, que decidiu não apenas desenvolver novos jogos para computador baseados nos RPGs recém adquiridos, como também retornar ao RPG de mesa trazendo a 5ª edição de Vampiro: A Máscara, a partir de 2018, sob o selo "V5".
+                    </p>
+                </section>
+
+            
+            </article>
+
+        </main>
+
+        <!-- COLUNA DIREITA: Âncoras/TOC -->
+        <aside>
+            <nav aria-label="Navegação de Âncoras do Artigo">
+                <h2>Neste Artigo</h2>
+                <ul>
+                    <li><a href="#conceito">Conceito</a></li>
+                    <li><a href="#clans">Clãs</a></li>
+                    <li><a href="#disciplines">Disciplinas</a></li>
+                    <li><a href="#renascimento">Renascimento</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+
+    <!-- RODAPÉ GLOBAL -->
+    <footer>
+        <p>&copy; 2025 Projeto de Semântica Estilizada.</p>
+    </footer>
+
+</body>
+</html>
